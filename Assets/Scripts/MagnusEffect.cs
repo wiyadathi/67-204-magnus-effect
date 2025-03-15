@@ -4,6 +4,7 @@ public class MagnusEffect : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] Vector3 velocity, spin;
+    //[SerializeField] float liftCoefficient = 0.1f;
     
     void Start()
     {
@@ -19,13 +20,13 @@ public class MagnusEffect : MonoBehaviour
 
         ApplyMagnusEffect();
     }
+
     void Kick() 
     {
         // ให้บอลเคลื่อนที่ไปข้างหน้าพร้อมกับการหมุน
         rb.linearVelocity = velocity;
         rb.angularVelocity = spin;
     }
-
 
     void ApplyMagnusEffect()
     {
